@@ -37,19 +37,17 @@ const MainForm = (props) => {
 
     const onSubmit = (e) => {
         // make a PUT request here to the DB
-        fetch(`${apiUrl}/`, {
-            method: 'PUT',
-            body: {
-                id: qid,
-                response: feedback
-            }
-        })
-        .then(response => response.json())
-        .then(() => {
-            props.history.push("/thanks");
-        })
-        .error(err => console.log(err))
-
+        // fetch(`${apiUrl}/`, {
+        //     method: 'PUT',
+        //     body: {
+        //         id: qid,
+        //         response: feedback
+        //     }
+        // })
+        // .then(response => response.json())
+        // .error(err => console.log(err))
+        
+        props.history.push("/thanks");
     };
 
     return (
